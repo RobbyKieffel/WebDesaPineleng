@@ -8,17 +8,28 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
-<body style="min-height: 800px; background-color: #fbfada;">
+<body style="min-height: 600px; background-color: #fbfada;">
     <?php
       include('dbhelper.php');
     ?>
-    <main class="container mb-5">
+    <nav id="fade-element" class="w-100 fixed-top d-flex align-items-center" style="height: 80px; background-color: #12372a; color: #fbfada;">
+      <div class="container">
+        <div class="row">
+          <a class="col-2 text-start fw-bolder fs-5 my-auto" style="color: #fbfada; text-decoration:none;">Kembali</a>
+          <h1 class="col text-center fw-bolder fs-2 my-auto" style="color: #fbfada;">Makatete Hills</h1>
+          <div class="col-2"></div>
+        </div>
+      </div>
+    </nav>
+
+    <br><br><br>
+
+    <main class="container my-5">
 
       <!-- BACK BUTTON -->
-      <a class="fixed-top btn btn-sm fw-bold m-2 px-3" href="#" style="background-color: #436850;color: #fbfada; width: fit-content;">Kembali</a>
 
       <!-- TITLE ARTICLE -->
-      <h1 class="text-center mt-5 fw-bold" style="color: #12372a;">Makatete Hills</h1>
+      <p class="text-center mt-5 fw-bold fs-2" style="color: #12372a;">Lorem ipsum dolor sit amet.</p>
 
       <!-- THREE DOTS -->
       <p class="text-center my-5">
@@ -64,110 +75,90 @@
 
       <br><br>
 
-      <!-- REVIEWS -->
-      <h3 class="mt-5 mb-3 fw-bold text-center">RATING</h3>
-
-      <div class="d-flex justify-content-center">
-          <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" fill="gold" class="bi bi-star-fill" viewBox="-1 -1 18 18">
-            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" stroke="black" stroke-width="1"/>
-          </svg>
-      </div>
-
-      <h4 class="fw-bold text-center mt-3 mb-5" id="rating"><?php echo get_makatete_hills_reviews(); ?></h4>
-
-      <br><br>
-      
-      <!-- MAKE OWN REVIEWS -->
-      <h3 class="my-5 fw-bold text-center ">Berikan Penilayan Anda</h3>
-
-      <form action="<?= htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post" id="stars_review" class="container d-flex justify-content-center">
+      <h3 class="my-5 fw-bold text-center">RATING</h3>
+      <!-- REVIEWS AND MK REVIEW -->
+      <div class="row my-5">
         
-        <label for="sub-btn-s1">
-          <input type="submit" id="sub-btn-s1" name="stars" value="1" style="display: none;">
-          <svg id="s-1" xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="none" stroke="black" stroke-width="0.7" viewBox="-1 -1 18 18">
+        <!-- MAKE REVIEW -->
+        <form action="<?= htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post" id="stars_review" class="container d-flex justify-content-center col align-self-center">
+          
+          <label for="sub-btn-s1">
+            <input type="submit" id="sub-btn-s1" name="stars" value="1" style="display: none;">
+            <svg id="s-1" xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="none" stroke="black" stroke-width="0.7" viewBox="-1 -1 18 18">
+              <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+            </svg>
+          </label>
+
+          <label for="sub-btn-s2">
+            <input type="submit" id="sub-btn-s2" name="stars" value="2" style="display: none;">
+            <svg id="s-2" xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="none" stroke="black" stroke-width="0.7" viewBox="-1 -1 18 18">
+              <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+            </svg>
+          </label>
+
+          <label for="sub-btn-s3">
+            <input type="submit" id="sub-btn-s3" name="stars" value="3" style="display: none;">
+            <svg id="s-3" xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="none" stroke="black" stroke-width="0.7" viewBox="-1 -1 18 18">
+              <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+            </svg>
+          </label>
+
+          <label for="sub-btn-s4">
+            <input type="submit" id="sub-btn-s4" name="stars" value="4" style="display: none;">
+            <svg id="s-4" xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="none" stroke="black" stroke-width="0.7" viewBox="-1 -1 18 18">
+              <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+            </svg>
+          </label>
+
+          <label for="sub-btn-s5">
+            <input type="submit" id="sub-btn-s5" name="stars" value="5" style="display: none;">
+            <svg id="s-5" xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="none" stroke="black" stroke-width="0.7" viewBox="-1 -1 18 18">
+              <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+            </svg>
+          </label>
+
+
+          <!-- <svg id="s-2" xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="none" stroke="black" stroke-width="0.7" viewBox="-1 -1 18 18">
             <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
           </svg>
-        </label>
-
-        <label for="sub-btn-s2">
-          <input type="submit" id="sub-btn-s2" name="stars" value="2" style="display: none;">
-          <svg id="s-2" xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="none" stroke="black" stroke-width="0.7" viewBox="-1 -1 18 18">
-            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-          </svg>
-        </label>
-
-        <label for="sub-btn-s3">
-          <input type="submit" id="sub-btn-s3" name="stars" value="3" style="display: none;">
           <svg id="s-3" xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="none" stroke="black" stroke-width="0.7" viewBox="-1 -1 18 18">
             <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
           </svg>
-        </label>
-
-        <label for="sub-btn-s4">
-          <input type="submit" id="sub-btn-s4" name="stars" value="4" style="display: none;">
           <svg id="s-4" xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="none" stroke="black" stroke-width="0.7" viewBox="-1 -1 18 18">
             <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
           </svg>
-        </label>
-
-        <label for="sub-btn-s5">
-          <input type="submit" id="sub-btn-s5" name="stars" value="5" style="display: none;">
           <svg id="s-5" xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="none" stroke="black" stroke-width="0.7" viewBox="-1 -1 18 18">
             <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+          </svg> -->
+        </form>
+
+        <div class="col d-flex justify-content-center">
+          <svg height="320" width="10" xmlns="http://www.w3.org/2000/svg">
+            <line x1="0" y1="40" x2="0" y2="280" style="stroke:black;stroke-width:10" />
+            Sorry, your browser does not support inline SVG.
           </svg>
-        </label>
+        </div>
 
+        <!-- REVIEWS -->
+        <div class="col mt-5">
+          <div class="d-flex justify-content-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" fill="gold" class="bi bi-star-fill" viewBox="-1 -1 18 18">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" stroke="black" stroke-width="1"/>
+              </svg>
+          </div>
 
-        <!-- <svg id="s-2" xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="none" stroke="black" stroke-width="0.7" viewBox="-1 -1 18 18">
-          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-        </svg>
-        <svg id="s-3" xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="none" stroke="black" stroke-width="0.7" viewBox="-1 -1 18 18">
-          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-        </svg>
-        <svg id="s-4" xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="none" stroke="black" stroke-width="0.7" viewBox="-1 -1 18 18">
-          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-        </svg>
-        <svg id="s-5" xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="none" stroke="black" stroke-width="0.7" viewBox="-1 -1 18 18">
-          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-        </svg> -->
+          <h4 class="fw-bold text-center mt-3 mb-5" id="rating"><?php echo get_makatete_hills_reviews(); ?></h4>
+        </div>
 
-      </form>
+      </div>
 
       <br><br><br>
     </main>
     
-    <footer class="w-100" style="max-height: 300px; background-color: #12372a; color: #fbfada;">
-      <div class="container">
-        <div class="row py-4">
-          <iframe class="col-1 rounded-5" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.5772583782295!2d124.82268647472476!3d1.4291211985574106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x328773cc8928b291%3A0x2ac5486753a63e31!2sMakatete%20Hills!5e0!3m2!1sid!2sid!4v1714439269891!5m2!1sid!2sid" style="width: 230px; height: 200px;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-          <div class="col-2 mt-4">
-            <div class="row">
-                <p class="col"><i class="bi bi-map">&#160;&#160; Kec. pineleng, kabupaten minahasa,sulawesi utara</i></p>
-            </div>
-
-            
-            <div class="row">
-                <p class="col"><i class="bi bi-compass">&#160;&#160; 1° 25' 27" North, 124° 50' 4" East</i></p>
-            </div>
-          </div>
-          
-          <div class="col-4 my-5">
-            <div class="mx-auto mb-3" style="width: 80px;">
-              <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" class="bi bi-diamond" viewBox="0 0 16 16">
-              <path d="M6.95.435c.58-.58 1.52-.58 2.1 0l6.515 6.516c.58.58.58 1.519 0 2.098L9.05 15.565c-.58.58-1.519.58-2.098 0L.435 9.05a1.48 1.48 0 0 1 0-2.098zm1.4.7a.495.495 0 0 0-.7 0L1.134 7.65a.495.495 0 0 0 0 .7l6.516 6.516a.495.495 0 0 0 .7 0l6.516-6.516a.495.495 0 0 0 0-.7L8.35 1.134z"/>
-              </svg>
-            </div>
-            <p class="w-100 text-center">Copyright©DesaPineleng</p>
-          </div>
-
-          <div class="col my-4">
-            <p><i class="bi bi-mailbox text-end my-3">&#160;&#160; 95661, Jl. Raya Manado - Tomohon, Pineleng I</i></p>
-            <p><i class="bi bi-telephone my-3">&#160;&#160; 0013-3748382</i></p>
-            <p><i class="bi bi-envelope-at my-3">&#160;&#160; pineleng30@gmail.com</i></p>
-          </div>
-
-        </div>
+    <footer class="w-100 d-flex align-items-center" style="height: 80px; background-color: #12372a; color: #fbfada;">
+      <div class="container d-flex justify-content-between">
+            <p class="w-100 text-start my-auto">Copyright©DesaPineleng</p>
+            <p class="w-100 text-end my-auto">Write by: <b>Robby Efruan</b></p>
       </div>
     </footer>
 
@@ -185,21 +176,6 @@
       function changeStarColor(star, newColor) {
         star.style.fill = newColor;
       }
-
-      // function review_star(num_of_star){
-      //   if (num_of_star == 0){
-      //     for(let i=0; i<5; i++){
-      //       let star = document.getElementById("stars_review").children[i];
-      //       changeStarColor(star, "none");
-      //     }
-      //     return;
-      //   }
-
-      //   for(let i=0; i<num_of_star; i++){
-      //     let star = document.getElementById("stars_review").children[i];
-      //     changeStarColor(star, "gold");
-      //   }
-      // }
 
       function review_star(num_of_star){
         if (num_of_star == 0){
@@ -233,22 +209,16 @@
 
       star_5.addEventListener("mouseover", () => review_star(5));
       star_5.addEventListener("mouseout", () => review_star(0));
-      
-      // star_1.addEventListener("mouseover", () => changeStarColor(star_1, "gold"));
-      // star_1.addEventListener("mouseout", () => changeStarColor(star_1, "none"));
+    
 
-      // star_2.addEventListener("mouseover", () => changeStarColor(star_2, "gold"));
-      // star_2.addEventListener("mouseout", () => changeStarColor(star_2, "none"));
+      const element = document.getElementById("fade-element");
+      const startFade = 100; // Adjust this value to control when fading starts (in pixels from the top)
 
-      // star_3.addEventListener("mouseover", () => changeStarColor(star_3, "gold"));
-      // star_3.addEventListener("mouseout", () => changeStarColor(star_3, "none"));
-
-      // star_4.addEventListener("mouseover", () => changeStarColor(star_4, "gold"));
-      // star_4.addEventListener("mouseout", () => changeStarColor(star_4, "none"));
-
-      // star_5.addEventListener("mouseover", () => changeStarColor(star_5, "gold"));
-      // star_5.addEventListener("mouseout", () => changeStarColor(star_5, "none"));
-
+      window.addEventListener("scroll", () => {
+        const scrollPosition = window.scrollY;
+        const opacity = Math.max(0, 1 - scrollPosition / startFade);
+        element.style.opacity = opacity;
+      });
 
 
     </script>
