@@ -1,0 +1,146 @@
+.group-child {
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: calc(50% - 720px);
+  background-color: #436850;
+  width: 1440px;
+  height: 128.6px;
+}
+.isi-artikel,
+.kembali {
+  position: absolute;
+  top: 41.55px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 42.5px;
+  cursor: pointer;
+}
+.kembali {
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  left: 56px;
+  font-size: var(--font-size-11xl);
+  font-family: var(--font-jost);
+  color: var(--color-lightyellow);
+  text-align: center;
+  width: 110px;
+}
+
+.kembali a{
+  text-decoration: none;
+  color: var(--color-lightyellow);
+}
+
+.isi-artikel {
+  left: 655px;
+  width: 130px;
+}
+.rectangle-parent {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 720px);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  width: 1440px;
+  height: 128.6px;
+}
+.fr5-child {
+  position: absolute;
+  top: 327px;
+  left: 121px;
+  border-radius: 25px;
+  width: 1198px;
+  height: 637px;
+  object-fit: cover;
+}
+.group-inner,
+.group-item {
+  position: absolute;
+  left: 0;
+  width: 1440px;
+}
+.group-item {
+  top: 14.88px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: #12372a;
+  height: 173.1px;
+}
+.group-inner {
+  top: 0;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.35);
+  border-radius: 20px;
+  background-color: var(--color-lightyellow);
+  height: 89px;
+}
+.copyrightdesapineleng {
+  position: absolute;
+  top: 118px;
+  left: 32px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.rectangle-group {
+  position: absolute;
+  top: 916px;
+  left: 0;
+  width: 1440px;
+  height: 188px;
+  text-align: center;
+  font-size: var(--font-size-11xl);
+  color: var(--color-lightyellow);
+  font-family: var(--font-jost);
+}
+.desa-pineleng-sebuah {
+  margin-block-start: 0;
+  margin-block-end: 1.5px;
+}
+.tak-hanya-sekedar {
+  margin: 0;
+}
+.desa-pineleng-sebuah-container1 {
+  width: 100%;
+}
+.desa-pineleng-sebuah-container,
+.sejarah-pineleng {
+  position: absolute;
+  letter-spacing: 0.05em;
+  line-height: 100%;
+}
+.desa-pineleng-sebuah-container {
+  top: 156px;
+  left: 0;
+  display: flex;
+  align-items: center;
+  width: 1142px;
+}
+.sejarah-pineleng {
+  top: 0;
+  left: 419px;
+  font-size: 35px;
+}
+.desa-pineleng-sebuah-tempat-y-parent,
+.fr5 {
+  text-align: center;
+  font-family: var(--font-jost);
+}
+.desa-pineleng-sebuah-tempat-y-parent {
+  position: absolute;
+  top: 201px;
+  left: 149px;
+  width: 1142px;
+  height: 685px;
+  font-size: 26px;
+  color: var(--color-black);
+}
+.fr5 {
+  width: 1440px;
+  position: relative;
+  background-color: var(--color-lightyellow);
+  height: 1104px;
+  overflow: hidden;
+  font-size: var(--font-size-11xl);
+  color: var(--color-lightyellow);
+}

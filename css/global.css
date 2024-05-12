@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  /* fonts */
+  --font-jost: Jost;
+  --font-arizonia: Arizonia;
+
+  /* font sizes */
+  --font-size-7xl: 26px;
+  --font-size-11xl: 30px;
+  --font-size-29xl: 48px;
+  --font-size-5xl: 24px;
+
+  /* Colors */
+  --color-darkgreen: #12372a;
+  --color-lightyellow: #fbfada;
+  --color-black: #000;
+  --color-darkslategray-100: #436850;
+  --color-white: #fff;
+
+  /* Paddings */
+  --padding-3xs: 10px;
+
+  /* Border radiuses */
+  --br-3xs: 10px;
+}

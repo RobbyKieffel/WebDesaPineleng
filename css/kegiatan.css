@@ -1,0 +1,339 @@
+.rectangle-div {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 720px);
+    background-color: var(--color-darkslategray-100);
+    width: 1440px;
+    height: 100px; 
+}
+.fr3 {
+    width: 1440px;
+    position: relative;
+    background-color: var(--color-lightyellow);
+    height: 100%;
+    overflow: hidden;
+    text-align: justify;
+    font-size: var(--font-size-5xl);
+    color: var(--color-white);
+    font-family: var(--font-jost);
+}
+.pineleng2 {
+    position: absolute;
+    top: 20px;
+    left: 45px;
+}
+.home {
+    position: relative;
+    font-weight: 600;
+}
+.home-wrapper {
+    border-radius: var(--br-3xs);
+    align-items: center;
+    justify-content: center;
+    padding: var(--padding-3xs);
+    cursor: pointer;
+}
+.frame-parent,
+.home-wrapper,
+.wisata-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+.wisata-wrapper {
+    align-items: center;
+    justify-content: center;
+    padding: var(--padding-3xs);
+    cursor: pointer;
+}
+.frame-parent {
+    position: absolute;
+    top: 16px;
+    right: 30px;
+    width: 461px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 16px;
+    text-align: left;
+    font-size: var(--font-size-7xl);
+    font-family: var(--font-jost);
+}
+  
+.frame-parent a{
+    color: inherit;
+    text-decoration: none;
+}
+  
+.rectangle-container {
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: calc(50% - 720px);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    width: 1440px;
+    height: 130px;
+    text-align: center;
+    font-size: 40px;
+    color: var(--color-lightyellow);
+    font-family: var(--font-arizonia);
+}
+
+h2 {
+    top: 100px;
+    color: black;
+    margin-top: 13rem;
+    font-weight: bold;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px; /* Menambahkan margin bawah agar sesuai dengan jarak dengan paragraf */
+    font-size: 1.3em;
+}
+h2::after {
+    content: "\2026"; /* Menggunakan karakter Unicode untuk titik tiga yang lebih besar */
+    font-size: 1.5em; /* Menyesuaikan ukuran titik tiga */
+}
+
+p {
+    color: black;
+    font-size: 1em;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px; /* Menambahkan margin atas agar sesuai dengan jarak dengan judul */
+}
+
+.horizontal {
+    width: 25%; /* Panjang garis horizontal */
+    border-bottom: 5px solid black; /* Membuat garis horizontal */
+    margin: 0 auto; /* Mengatur posisi horizontal ke tengah */
+    margin-bottom: 50px; /* Menyesuaikan margin bawah garis horizontal */
+    margin-top: 20px; /* Menyesuaikan margin atas garis horizontal */
+    border-radius: 50px;
+}
+.containerflex {
+    display: flex;
+    align-items: center; /* Mengatur agar konten berada di tengah */
+    justify-content: flex-start; /* Mengatur agar konten berada di sebelah kiri */
+    margin-top: 30px; /* Menambahkan margin atas antara setiap div */
+    margin-bottom: 30px;  /* Mengatur agar konten berada di sebelah kiri */
+}
+
+.paragraphdua {
+    margin-right: 20px; /* Menyesuaikan margin kanan agar terpisah dari foto */
+    flex-grow: 1; /* Memberikan ruang fleksibel pada elemen agar bisa merapat ke foto */
+}
+
+.paragraphdua p {
+    text-align: justify; /* Membuat paragraf menjadi rata kiri dan kanan */
+    margin-left: 80px;
+    margin-top: 30px;
+    margin-right: -20px;
+    font-size: 1em;
+}
+
+.foto {
+    margin-right: 61px; /* Menyesuaikan margin kanan agar terpisah dari teks */
+}
+
+img { 
+    width: 350px; /* Mengatur lebar gambar */
+    height: 300px;
+    margin-left: 60px; 
+    border-radius: 10px;
+    margin-right: 20%;
+    margin-top: 88px;
+}
+h3 {
+    color: black;
+    margin-left: 80px;
+    margin-top: 1%;
+    font-size: 2rem;
+}
+.horizontal2 {
+    width: 25%; /* Panjang garis horizontal */
+    border-bottom: 5px solid black; /* Membuat garis horizontal */
+    margin: left; /* Mengatur posisi horizontal ke tengah */
+    margin-left: 6%;
+    margin-bottom: 50px; /* Menyesuaikan margin bawah garis horizontal */
+    margin-top: 40px; /* Menyesuaikan margin atas garis horizontal */
+    border-radius: 50px;
+}   
+a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  /*footer*/
+  .group-parent {
+      position: relative;
+      bottom: 0;
+      left: calc(50% - 720px);
+      width: 1440px;
+      height: 408px;
+  }
+  
+  .group-item,
+  .rectangle,
+  .rectangle-parent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1440px;
+    height: 100px;
+  }
+  
+  .group-item {
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.35);
+      border-radius: 20px;
+      background-color: var(--color-lightyellow);
+      height: 136px;
+  }
+  
+  .group-child {
+      position: absolute;
+      top: 50px;
+      left: 0;
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+      background-color: #12372a;
+      width: 1440px;
+      height: 372px;
+  }
+  
+  .rectangle,
+  .rectangle-parent {
+    height: 429px;
+  }
+  
+  .rectangle {
+      text-decoration: none;
+      top: 3px;
+      border-radius: var(--br-3xs);
+      width: 200px;
+      height: 200px;
+      background-image: url(/public/rectangle@3x.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: top;
+      cursor: pointer;
+  }
+  
+  .rectangle-group {
+      position: absolute;
+      top: 174px;
+      left: 33px;
+      width: 479px;
+      height: 203px;
+      text-align: left;
+  }
+  
+  .alamat,
+  .kec-pineleng-kabupaten,
+  .north-124-50 {
+    position: absolute;
+    left: 217px;
+    line-height: 100%;
+  }
+  
+  .alamat {
+      top: 0;
+      font-size: var(--font-size-11xl);
+  }
+  
+  .kec-pineleng-kabupaten {
+      top: 55px;
+      display: flex;
+      align-items: center;
+      width: 262px;
+  }
+  
+  .north-124-50 {
+      top: 136px;
+      display: flex;
+      align-items: center;
+      width: 212px;
+  }
+  
+  .contact {
+      position: absolute;
+      top: 177px;
+      left: 1061px;
+      width: 311px;
+      height: 185.8px;
+  }
+  
+  .email-pineleng30gmailcom,
+  .hubungi-kami,
+  .jl-raya-manado {
+    position: absolute;
+    left: 0;
+    line-height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .telp-0013-3748382 {
+      position: absolute;
+      top: 126px;
+      left: 0;
+      line-height: 100%;
+      display: flex;
+      align-items: center;
+      width: 205px;
+      height: 26.8px;
+  }
+  
+  .email-pineleng30gmailcom {
+      top: 159px;
+      width: 311px;
+      height: 26.8px;
+  }
+  
+  .hubungi-kami {
+      top: 0;
+      font-size: var(--font-size-11xl);
+      width: 179px;
+      height: 33.5px;
+  }
+  
+  .jl-raya-manado {
+      top: 72px;
+      text-align: left;
+      width: 272px;
+  }
+  
+  .copyrightdesapineleng {
+      position: absolute;
+      top: 322px;
+      left: 591px;
+      line-height: 100%;
+  }
+  
+  .frame-child {
+      position: absolute;
+      top: 75px;
+      left: 520px;
+      max-height: 100%;
+      width: 281px;
+  }
+  
+  .desa-parent {
+      top: 194px;
+      left: 625px;
+      width: 191px;
+      height: 100px;
+      text-align: center;
+      font-size: var(--font-size-29xl);
+      font-family: var(--font-arizonia);
+  }
+  
+  .desa {
+      position: absolute;
+      top: 77px;
+      left: 289px;
+  }
+  
+  .desa-parent, .pineleng {
+      position: absolute;
+      top: 117px;
+      left: 336px;
+  }
